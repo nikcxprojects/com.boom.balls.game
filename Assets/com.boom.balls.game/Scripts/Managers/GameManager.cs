@@ -25,7 +25,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        StatsUtility.Skins = 5;
         LevelPrefab = Resources.Load<GameObject>("level");
         Parent = GameObject.Find("Environment").transform;
 
