@@ -18,10 +18,14 @@ public class GameManager : MonoBehaviour
     public Transform arrow;
 
     [Space(10)]
+    [SerializeField] GameObject currentBall;
+
+    [Space(10)]
     [SerializeField] Text scoreText;
 
     private void Awake()
     {
+        StatsUtility.Skins = 5;
         LevelPrefab = Resources.Load<GameObject>("level");
         Parent = GameObject.Find("Environment").transform;
 
@@ -87,6 +91,7 @@ public class GameManager : MonoBehaviour
     public void OpenSkins(bool IsOpened)
     {
         skins.SetActive(IsOpened);
+        currentBall.SetActive(!IsOpened);
     }
 
     private IEnumerator ShowMessage()

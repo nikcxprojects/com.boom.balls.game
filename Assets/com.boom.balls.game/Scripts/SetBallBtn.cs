@@ -17,6 +17,11 @@ public class SetBallBtn : MonoBehaviour
 
     private void OnEnable()
     {
-        btn.interactable = transform.parent.GetSiblingIndex() <= StatsUtility.Skins;
+        bool isOpened = transform.parent.GetSiblingIndex() <= StatsUtility.Skins;
+        btn.interactable = isOpened;
+
+        GetComponent<Image>().sprite = isOpened ? 
+            Resources.Load<Sprite>($"Balls/{transform.parent.GetSiblingIndex()}") : 
+            Resources.Load<Sprite>("closed");
     }
 }
