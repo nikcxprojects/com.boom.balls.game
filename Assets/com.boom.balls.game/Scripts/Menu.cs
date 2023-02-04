@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
+    [SerializeField] Button startBtn;
     private IEnumerator Start()
     {
         yield return new WaitForSeconds(1.0f);
-        transform.GetChild(0).GetComponent<Button>().onClick.AddListener(() =>
+        startBtn.onClick.AddListener(() =>
         {
             GameManager.Instance.InitLevel();
             gameObject.SetActive(false);
