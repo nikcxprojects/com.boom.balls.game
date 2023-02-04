@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject menu;
 
     [Space(10)]
+    [SerializeField] GameObject leaderboard;
+
+    [Space(10)]
     [SerializeField] GameObject skins;
     [SerializeField] Transform rootSkins;
     public Transform arrow;
@@ -91,6 +94,11 @@ public class GameManager : MonoBehaviour
     {
         skins.SetActive(IsOpened);
         currentBall.SetActive(!IsOpened);
+    }
+
+    public void OpenLeaderboard(bool IsOpened)
+    {
+        leaderboard.SetActive(IsOpened);
     }
 
     private IEnumerator ShowMessage()
