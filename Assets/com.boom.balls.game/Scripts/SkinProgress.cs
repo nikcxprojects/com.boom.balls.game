@@ -5,8 +5,6 @@ using UnityEngine.UI;
 public class SkinProgress : MonoBehaviour
 {
     public static SkinProgress Instance { get=> FindObjectOfType<SkinProgress>(); }
-
-    [SerializeField] Image progressAmount;
     private const float max = 100;
 
     private void OnEnable()
@@ -17,14 +15,12 @@ public class SkinProgress : MonoBehaviour
     public void UpdateProgress(int amount = 0)
     {
         StatsUtility.SkinProgress += amount;
-        progressAmount.fillAmount = StatsUtility.SkinProgress / max;
-
+        
         if (StatsUtility.SkinProgress >= max)
         {
             ++StatsUtility.Skins;
             StatsUtility.SkinProgress = 0;
 
-            progressAmount.fillAmount = StatsUtility.SkinProgress / max;
             StartCoroutine(nameof(ShowMessage));
         }
     }
