@@ -4723,7 +4723,7 @@ GameObject:
   - component: {fileID: 1144214452}
   - component: {fileID: 1144214451}
   m_Layer: 0
-  m_Name: sound
+  m_Name: sound option
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5886,7 +5886,7 @@ GameObject:
   - component: {fileID: 1438110970}
   - component: {fileID: 1438110969}
   m_Layer: 0
-  m_Name: vibration
+  m_Name: vibration option
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7137,7 +7137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1710432194}
   m_Layer: 0
-  m_Name: Sound
+  m_Name: Sounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7539,7 +7539,7 @@ GameObject:
   - component: {fileID: 1784202752}
   - component: {fileID: 1784202751}
   m_Layer: 0
-  m_Name: music
+  m_Name: music option
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
