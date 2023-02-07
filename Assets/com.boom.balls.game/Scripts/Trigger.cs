@@ -10,7 +10,7 @@ public class Trigger : MonoBehaviour
         GameManager.Instance.CheckResult(distance);
 
         OnCollided?.Invoke();
-        if(SettingsManager.VibraEnable)
+        if(Switcher.VibraEnabled)
         {
             Handheld.Vibrate();
         }

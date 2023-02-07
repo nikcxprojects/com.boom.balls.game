@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject game;
     [SerializeField] GameObject menu;
+    [SerializeField] GameObject settings;
 
     [Space(10)]
     [SerializeField] GameObject leaderboard;
@@ -96,10 +97,9 @@ public class GameManager : MonoBehaviour
         currentBall.SetActive(!IsOpened);
     }
 
-    public void OpenLeaderboard(bool IsOpened)
-    {
-        leaderboard.SetActive(IsOpened);
-    }
+    public void OpenLeaderboard(bool IsOpened) => leaderboard.SetActive(IsOpened);
+
+    public void OpenSetings(bool IsOpened) => settings.SetActive(IsOpened);
 
     private IEnumerator ShowMessage()
     {
