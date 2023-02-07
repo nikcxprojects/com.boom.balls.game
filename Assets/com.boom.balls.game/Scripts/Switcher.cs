@@ -29,7 +29,7 @@ public class Switcher : MonoBehaviour
 
     private void Awake()
     {
-        Enable = !PlayerPrefs.HasKey(targetSourceName) || PlayerPrefs.GetInt(targetSourceName) > 0;
+        Enable = true;
 
         Image = GetComponent<Image>();
         Handler = transform.GetChild(0).GetComponent<Image>();
@@ -111,9 +111,6 @@ public class Switcher : MonoBehaviour
     private IEnumerator Switch()
     {
         Enable = !Enable;
-
-        PlayerPrefs.SetInt(targetSourceName, Enable ? 1 : 0);
-        PlayerPrefs.Save();
 
         if (targetSource)
         {
