@@ -8,14 +8,9 @@ public class Level : MonoBehaviour
     private Vector2 velocity = Vector2.zero;
     private const float smoothTime = 0.35f;
 
-    [SerializeField] FixedJoint2D fixedJoint;
-    [SerializeField] GameObject pivot;
-    [SerializeField] GameObject basket;
-
     private void Start()
     {
         transform.position = new Vector3(0, 13.0f);
-        basket.transform.localPosition = new Vector2(Random.Range(-1.0f, 1.0f), -3.29f);
     }
 
     private void Update()
@@ -34,16 +29,12 @@ public class Level : MonoBehaviour
 
     public void Cute()
     {
-        if(!IsReady || !fixedJoint.connectedBody)
+        if(!IsReady)
         {
             return;
         }
 
-        fixedJoint.connectedBody.transform.SetParent(transform);
-        fixedJoint.connectedBody.velocity = Vector2.zero;
-        fixedJoint.connectedBody = null;
-
-        pivot.SetActive(false);
+        Debug.Log("cute");
         StartCoroutine(nameof(ClearMe));
     }
 
