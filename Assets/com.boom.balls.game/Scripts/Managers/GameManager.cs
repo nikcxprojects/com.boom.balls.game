@@ -67,7 +67,6 @@ public class GameManager : MonoBehaviour
 
     public void OpenMenu()
     {
-        Time.timeScale = 1;
         if (FindObjectOfType<Level>())
         {
             Destroy(FindObjectOfType<Level>().gameObject);
@@ -76,8 +75,9 @@ public class GameManager : MonoBehaviour
         StatsUtility.BestScore = StatsUtility.Score;
 
         game.SetActive(false);
-        menu.SetActive(true);
+        pause.SetActive(false);
 
+        menu.SetActive(true);
         skins.SetActive(false);
     }
 
@@ -102,11 +102,7 @@ public class GameManager : MonoBehaviour
 
     public void OpenSetings(bool IsOpened) => settings.SetActive(IsOpened);
 
-    public void OpenPause(bool IsPause)
-    {
-        Time.timeScale = IsPause ? 0 : 1;
-        pause.SetActive(IsPause);
-    }
+    public void OpenPause(bool IsPause) => pause.SetActive(IsPause);
 
     private IEnumerator ShowMessage()
     {

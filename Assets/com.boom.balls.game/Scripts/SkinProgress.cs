@@ -1,11 +1,10 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SkinProgress : MonoBehaviour
 {
     public static SkinProgress Instance { get=> FindObjectOfType<SkinProgress>(); }
-    private const float max = 100;
+    private const float max = 4;
 
     private void OnEnable()
     {
