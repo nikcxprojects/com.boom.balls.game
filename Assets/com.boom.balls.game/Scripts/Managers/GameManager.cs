@@ -51,17 +51,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void CheckResult(float distance)
+    public void CheckResult()
     {
-        int value = distance < 0.2f ? 2 : 1;
-        if(value > 1)
-        {
-            StartCoroutine(nameof(ShowMessage));
-        }
+        StartCoroutine(nameof(ShowMessage));
+        SkinProgress.Instance.UpdateProgress(1);
 
-        SkinProgress.Instance.UpdateProgress(value);
-
-        StatsUtility.Score += value;
+        StatsUtility.Score++;
         scoreText.text = $"{StatsUtility.Score}";
     }
 

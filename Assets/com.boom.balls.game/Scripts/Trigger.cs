@@ -6,8 +6,7 @@ public class Trigger : MonoBehaviour
     public static Action OnCollided { get; set; }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        float distance = Mathf.Abs(collision.transform.position.x - transform.position.x);
-        GameManager.Instance.CheckResult(distance);
+        GameManager.Instance.CheckResult();
 
         OnCollided?.Invoke();
         if(Switcher.VibraEnabled)

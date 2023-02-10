@@ -4,7 +4,7 @@ using UnityEngine;
 public class SkinProgress : MonoBehaviour
 {
     public static SkinProgress Instance { get=> FindObjectOfType<SkinProgress>(); }
-    private const float max = 4;
+    private const float max = 50;
 
     private void OnEnable()
     {
