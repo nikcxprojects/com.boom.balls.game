@@ -4,9 +4,12 @@ using System.Collections;
 public class Level : MonoBehaviour
 {
     private bool IsReady { get; set; }
+    private bool IsCute { get; set; }
 
     private Vector2 velocity = Vector2.zero;
     private const float smoothTime = 0.35f;
+
+    [SerializeField] Rigidbody2D ball;
 
     private void Start()
     {
@@ -29,21 +32,22 @@ public class Level : MonoBehaviour
 
     public void Cute()
     {
-        if(!IsReady)
+        if(!IsReady || IsCute)
         {
             return;
         }
 
-        Debug.Log("cute");
+        IsCute = true;
+        ball.AddForce(Vector2.up * 20, ForceMode2D.Impulse);
         StartCoroutine(nameof(ClearMe));
     }
 
     private IEnumerator ClearMe()
     {
-        yield return new WaitForSeconds(1.75f);
+        yield return new WaitForSeconds(1.55f);
         while (transform.position.y > -3.0f)
         {
-            transform.position = Vector2.MoveTowards(transform.position, Vector2.down * 3.0f, 10.0f * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, Vector2.down * 3.0f, 15.0f * Time.deltaTime);
             yield return null;
         }
 
