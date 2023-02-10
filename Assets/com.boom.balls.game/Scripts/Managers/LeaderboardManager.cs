@@ -1,6 +1,7 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class LeaderboardManager : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class LeaderboardManager : MonoBehaviour
 
     public void UpdateBoard()
     {
+        foreach(Transform t in container)
+        {
+            t.gameObject.SetActive(false);
+        }
+
         int[] scores = new int[container.childCount];
         for(int i = 0; i < scores.Length; i++)
         {
@@ -21,6 +27,17 @@ public class LeaderboardManager : MonoBehaviour
         {
             Text leader = container.GetChild(i).GetChild(0).GetComponent<Text>();
             leader.text = $"{sortedScores[i]}";
+        }
+
+        StartCoroutine(nameof(EnableItems));
+    }
+
+    IEnumerator EnableItems()
+    {
+        foreach (Transform t in container)
+        {
+            yield return new WaitForSeconds(1);
+            t.gameObject.SetActive(true);
         }
     }
 }

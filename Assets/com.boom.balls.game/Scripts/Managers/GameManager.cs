@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject game;
     [SerializeField] GameObject menu;
     [SerializeField] GameObject settings;
+    [SerializeField] GameObject pause;
 
     [Space(10)]
     [SerializeField] GameObject leaderboard;
@@ -58,7 +59,6 @@ public class GameManager : MonoBehaviour
             StartCoroutine(nameof(ShowMessage));
         }
 
-        Progress.Instance.UpdateProgress(value);
         SkinProgress.Instance.UpdateProgress(value);
 
         StatsUtility.Score += value;
@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
 
     public void OpenMenu()
     {
+        Time.timeScale = 1;
         if (FindObjectOfType<Level>())
         {
             Destroy(FindObjectOfType<Level>().gameObject);
@@ -100,6 +101,12 @@ public class GameManager : MonoBehaviour
     public void OpenLeaderboard(bool IsOpened) => leaderboard.SetActive(IsOpened);
 
     public void OpenSetings(bool IsOpened) => settings.SetActive(IsOpened);
+
+    public void OpenPause(bool IsPause)
+    {
+        Time.timeScale = IsPause ? 0 : 1;
+        pause.SetActive(IsPause);
+    }
 
     private IEnumerator ShowMessage()
     {
