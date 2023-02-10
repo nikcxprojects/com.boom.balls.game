@@ -2103,9 +2103,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a345038b8737a40924a965831adb06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missionText: {fileID: 833722811}
-  detailsText: {fileID: 1047657203}
-  countText: {fileID: 1908497114}
+  missionText: {fileID: 1642770406}
+  detailsText: {fileID: 1537650564}
+  countText: {fileID: 1994572842}
 --- !u!114 &596486869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4434,7 +4434,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f0e1e585c1e4b8241bbfbe23b5c600c1, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.165
+  m_Volume: 0.386
   m_Pitch: 0.85
   Loop: 0
   Mute: 0
@@ -5639,7 +5639,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fbc1aba667d3edf468d6480d66a7798b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.442
+  m_Volume: 0.144
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6621,7 +6621,7 @@ GameObject:
   - component: {fileID: 1537650565}
   - component: {fileID: 1537650564}
   m_Layer: 0
-  m_Name: description
+  m_Name: details
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

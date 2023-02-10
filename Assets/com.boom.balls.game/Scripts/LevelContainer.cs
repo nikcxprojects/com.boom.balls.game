@@ -11,8 +11,8 @@ public class LevelContainer : MonoBehaviour
 
     private void OnEnable()
     {
-        missionText.text = $"{StatsUtility.Level}/{max}";
+        missionText.text = $"MISSION {StatsUtility.Level}/{max}";
         detailsText.text = $"Score {StatsUtility.Level} point";
-        countText.text = $"{StatsUtility.LevelProgress}";
+        countText.text = $"{StatsUtility.LevelProgress}/{StatsUtility.Level}";
     }
 }

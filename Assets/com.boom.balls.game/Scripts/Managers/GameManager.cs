@@ -57,6 +57,13 @@ public class GameManager : MonoBehaviour
         SkinProgress.Instance.UpdateProgress(1);
 
         StatsUtility.Score++;
+        StatsUtility.LevelProgress++;
+        if(StatsUtility.LevelProgress >= StatsUtility.Level)
+        {
+            StatsUtility.LevelProgress = 0;
+            StatsUtility.Level++;
+        }
+
         scoreText.text = $"{StatsUtility.Score}";
     }
 
