@@ -2063,7 +2063,7 @@ GameObject:
   - component: {fileID: 596486869}
   - component: {fileID: 596486868}
   m_Layer: 0
-  m_Name: skin progress
+  m_Name: level progress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2100,9 +2100,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 596486866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 481e46c709bad4a48b26804a46adc505, type: 3}
+  m_Script: {fileID: 11500000, guid: 68a345038b8737a40924a965831adb06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missionText: {fileID: 833722811}
+  detailsText: {fileID: 1047657203}
+  countText: {fileID: 1908497114}
 --- !u!114 &596486869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4321,7 +4324,7 @@ GameObject:
   - component: {fileID: 1047657204}
   - component: {fileID: 1047657203}
   m_Layer: 0
-  m_Name: description
+  m_Name: details
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7984,7 +7987,7 @@ GameObject:
   - component: {fileID: 1799267843}
   - component: {fileID: 1799267845}
   m_Layer: 0
-  m_Name: skin progress
+  m_Name: level progress
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8059,9 +8062,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1799267841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 481e46c709bad4a48b26804a46adc505, type: 3}
+  m_Script: {fileID: 11500000, guid: 68a345038b8737a40924a965831adb06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missionText: {fileID: 833722811}
+  detailsText: {fileID: 1047657203}
+  countText: {fileID: 1908497114}
 --- !u!1 &1800085556
 GameObject:
   m_ObjectHideFlags: 0
